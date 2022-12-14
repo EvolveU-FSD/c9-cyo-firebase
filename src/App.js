@@ -1,11 +1,14 @@
 import './App.css';
 import { RestOfApp } from './component/RestOfApp';
+import { AuthProvider } from './providers/AuthProvider';
 import { FirebaseProvider } from './providers/FirebaseProvider';
 
 function App() {
   return (
     <FirebaseProvider>
-      <RestOfApp />
+      <AuthProvider>
+        <RestOfApp />
+      </AuthProvider>
     </FirebaseProvider>
   );
 }
