@@ -1,5 +1,5 @@
 import './App.css';
-import { RestOfApp } from './component/RestOfApp';
+import { RestOfApp } from './components/RestOfApp';
 import { AuthProvider } from './providers/AuthProvider';
 import { FirebaseProvider } from './providers/FirebaseProvider';
 

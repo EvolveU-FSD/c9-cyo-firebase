@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { FirebaseContext } from '../providers/FirebaseProvider';
+import { AddHeroForm } from './AddHeroForm';
+import { HeroList } from './HeroList';
 import { LoginForm } from './LoginForm';
 
 export const RestOfApp = () => {
@@ -13,6 +15,8 @@ export const RestOfApp = () => {
     <div className='App'>
       {user ? 'you are logged in!' : 'not logged in 😔'}
       <LoginForm />
+      <HeroList />
+      <AddHeroForm />
     </div>
   );
 };
