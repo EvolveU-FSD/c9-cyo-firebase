@@ -18,6 +18,7 @@ export const LoginForm = () => {
       <br />
       <input
         name='password'
+        type='password'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
