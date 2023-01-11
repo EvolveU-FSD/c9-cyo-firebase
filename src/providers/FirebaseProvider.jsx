@@ -17,13 +17,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-connectAuthEmulator(auth, 'http://localhost:9099');
 const db = getFirestore(app);
-connectFirestoreEmulator(db, 'localhost', 8080);
 const cloudFuncs = getFunctions(app);
-connectFunctionsEmulator(cloudFuncs, 'localhost', 5001);
 const storage = getStorage(app);
-connectStorageEmulator(storage, 'localhost', 9199);
+
+if (process.env.REACT_APP_USE_EMULATORS === 'true') {
+  connectAuthEmulator(auth, 'http://localhost:9099');
+  connectFirestoreEmulator(db, 'localhost', 8080);
+  connectFunctionsEmulator(cloudFuncs, 'localhost', 5001);
+  connectStorageEmulator(storage, 'localhost', 9199);
+}
 
 export const FirebaseContext = React.createContext();
 
