@@ -14,7 +14,7 @@ export const RestOfApp = () => {
 
   return (
     <div className='App'>
-      {user ? 'you are logged in!' : 'not logged in 😔'}
+      {user ? 'you are logged in!' : 'not logged in 😔!!!'}
       <LoginForm />
       <HeroList />
       <AddHeroForm />
