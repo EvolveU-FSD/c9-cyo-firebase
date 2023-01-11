@@ -4,10 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-
+*.log
 # testing
 /coverage
-
+emulator-storage
 # production
 /build
 
